@@ -60,16 +60,16 @@
 
 
       <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 bg-gray-100" id="nav-content">
-        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+      <ul class="list-reset lg:flex justify-end flex-1 items-center">
 
-          <li class="mr-3">
+        <li class="mr-3">
             <a class="inline-block text-white no-underline hover:text-black hover:text-underline py-2 px-4" href="#">Login</a>
-          </li>
-          <li class="mr-3">
+        </li>
+        <li class="mr-3">
             <a class="inline-block text-white no-underline hover:text-black hover:text-underline py-2 px-4" href="#">Register</a>
-          </li>
+        </li>
 
-        </ul>
+      </ul>
 
 
         <button id="navAction" class="mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-transparent text-white">
@@ -641,6 +641,15 @@
 			return str.substr(0, index) + value + str.substr(index)
 		}
 	</script>
+  <script>
+    fetch('footer.html')
+        .then(data => data.text())
+        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+
+    fetch('navbar.html')
+        .then(data => data.text())
+        .then(text => document.getElementById('nav-placeholder').innerHTML = text);
+    </script>
   </body>
   
   </html>
