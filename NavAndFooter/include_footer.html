@@ -1,0 +1,15 @@
+<html>  
+  <body> 
+      <div id="nav-placeholder"></div>
+    <div id="footer-placeholder"></div>
+  </body> 
+  <script>
+    fetch('footer.html')
+        .then(data => data.text())
+        .then(text => document.getElementById('footer-placeholder').innerHTML = text);
+
+    fetch('navbar.html')
+        .then(data => data.text())
+        .then(text => document.getElementById('nav-placeholder').innerHTML = text);
+    </script>
+</html>
